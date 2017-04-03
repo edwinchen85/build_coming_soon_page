@@ -39,4 +39,34 @@ $(document).ready(function() {
 
     $('html, body').animate({scrollTop: 0}, 500);
   });
+
+
+
+
+  // Make the placeholder attribute work for all browsers
+  $('[placeholder]').blur(function() {
+    var input = $(this);
+
+    if(input.val() == '' || input.val() == input.attr('placeholder')) {
+      input.addClass('placeholder');
+      input.val(input.attr('placeholder'));
+    }
+  }).focus(function() {
+    var input = $(this);
+
+    if(input.val() == input.attr('placeholder')) {
+      input.val('');
+      input.removeClass('placeholder');
+    }
+  }).blur();
+
+  $('[placeholder]').parents('form').submit(function() {
+    $(this).find('[placeholder]').each(function() {
+      var input = $(this);
+
+      if (input.val() == input.attr('placeholder')) {
+        input.val('');
+      }
+    });
+  });
 });

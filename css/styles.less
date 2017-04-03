@@ -364,3 +364,42 @@ form {
     }
   }
 }
+
+
+
+
+/***********************************************************************************************/
+/* 10. FOOTER */
+/***********************************************************************************************/
+.main-footer {
+  text-align: center;
+}
+
+.go-top {
+  background-color: black;
+  background-color: rgba(0, 0, 0, .2);
+  bottom: (@baseline * 2);
+  display: none;
+  height: (@baseline * 2);
+  position: fixed;
+  right: (@baseline * 2);
+  .transition(background-color);
+  width: (@baseline * 2);
+
+  &:hover {
+    background-color: @link-color;
+    background-color: rgba(0, 0, 0, .5);
+  }
+
+  span {
+    color: white;
+    display: inline-block;
+    font-size: @base-font-size;
+    left: 50%;
+    position: absolute;
+    height: @baseline;
+    margin: -(@baseline / 2) 0 0 -(@baseline / 2);
+    top: 50%;
+    width: @baseline;
+  }
+}

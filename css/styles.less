@@ -115,3 +115,42 @@ li {
 .icon-arrow-up:before {
   content: "\26";
 }
+
+
+
+
+/***********************************************************************************************/
+/* 2. LESS VARIABLES AND MIXINS */
+/***********************************************************************************************/
+@body-font: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+@special-font: 'Gentium Basic', Georgia, serif;
+@base-font-size: 16px;
+@baseline: (@base-font-size * 1.5);
+
+@heading-one-size: (@baseline * 1.5);
+@heading-one-leading: (@baseline * 2);
+@heading-two-size: @baseline;
+@heading-two-leading: (@baseline * 1.5);
+
+@text-color: #626262;
+@light-text-color: #c3c3c3;
+@heading-one-color: #2f2f2f;
+@link-color: #F54128;
+@border-color: #D1D6D4;
+@progress-bar-outer: #f2f4e6;
+@progress-bar-inner: #a1c457;
+@freebie-bg: @heading-one-color;
+@form-bg: @heading-one-color;
+@freebie-bg: @heading-one-color;
+@placeholder-color: #ABA9A9;
+
+@default-spacing: (@baseline * 2);
+
+@image-folder: "../images/";
+
+.transition(@property: color, @duration: .2s, @ease: ease-in-out) {
+  -webkit-transition: @property @duration @ease;
+  -moz-transition: @property @duration @ease;
+  -o-transition: @property @duration @ease;
+  transition: @property @duration @ease;
+}

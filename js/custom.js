@@ -20,4 +20,23 @@ $(document).ready(function() {
   // Append the description to the inner progress bar layer
   $('<div class="progress-description">'+ '<p><strong>'+ progress + '%</strong></p><p>'+ progressDescription +'</p></div>').appendTo(".ui-progressbar-value");
   });
+
+
+
+
+  // Show/hide the footer button
+  $(window).scroll(function() {
+    if($(this).scrollTop() > 300) {
+      $('.go-top').fadeIn(200);
+    } else {
+      $('.go-top').fadeOut(200);
+    }
+  });
+
+  // Animate scrolling
+  $('.go-top').click(function(e) {
+    e.preventDefault();
+
+    $('html, body').animate({scrollTop: 0}, 500);
+  });
 });

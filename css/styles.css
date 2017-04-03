@@ -313,3 +313,33 @@ form input[type="submit"]:hover {
   max-width: 812px;
   width: 100%;
 }
+/***********************************************************************************************/
+/* 9. CONTACT */
+/***********************************************************************************************/
+.social li {
+  display: inline;
+  margin: 3px;
+}
+.social li a {
+  background-color: #f54128;
+  color: white;
+  display: inline-block;
+  height: 48px;
+  position: relative;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+  width: 48px;
+}
+.social li a:hover {
+  background-color: #2f2f2f;
+}
+.social li a span {
+  display: inline-block;
+  font-size: 24px;
+  height: 24px;
+  left: 50%;
+  margin: -12px 0 0 -12px;
+  position: absolute;
+  top: 50%;
+  width: 24px;
+}

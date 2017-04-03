@@ -326,3 +326,41 @@ form {
     width: 100%;
   }
 }
+
+
+
+
+/***********************************************************************************************/
+/* 9. CONTACT */
+/***********************************************************************************************/
+.social {
+  li {
+    display: inline;
+    margin: 3px;
+
+    a {
+      background-color: @link-color;
+      color: white;
+      display: inline-block;
+      height: (@baseline * 2);
+      position: relative;
+      .transition(background-color);
+      width: (@baseline * 2);
+
+      &:hover {
+        background-color: @heading-one-color;
+      }
+
+      span {
+        display: inline-block;
+        font-size: @baseline;
+        height: @baseline;
+        left: 50%;
+        margin: -(@baseline / 2) 0 0 -(@baseline / 2);
+        position: absolute;
+        top: 50%;
+        width: @baseline;
+      }
+    }
+  }
+}

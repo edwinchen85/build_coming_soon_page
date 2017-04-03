@@ -303,6 +303,36 @@ form {
 
 
 /***********************************************************************************************/
+/* 7. STATUS */
+/***********************************************************************************************/
+.ui-progressbar {
+  background: @progress-bar-outer url('@{image-folder}light-green-bg.jpg');
+  padding: 15px;
+
+  .ui-progressbar-value {
+    background: @progress-bar-inner url('@{image-folder}dark-green-bg.jpg');
+    height: ((@baseline * 8) - 30);
+    position: relative;
+
+    .progress-description {
+      left: 100%;
+      margin-left: @baseline;
+      margin-top: @baseline;
+      text-align: left;
+      position: absolute;
+      width: @baseline * 10;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+
+
+
+/***********************************************************************************************/
 /* 8. FREEBIE */
 /***********************************************************************************************/
 .freebie-container {

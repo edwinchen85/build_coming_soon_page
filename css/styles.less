@@ -314,6 +314,23 @@ form {
     height: ((@baseline * 8) - 30);
     position: relative;
 
+    &:before {
+      content: "";
+      border-top: (@baseline - 15) solid transparent;
+      border-bottom: (@baseline - 15) solid transparent;
+      border-left: (@baseline - 15) solid darken(@progress-bar-inner, 3%);
+      height: 0;
+      position: absolute;
+      top: (@baseline + 3);
+      right: -(@baseline - 16);
+      width: 0;
+    }
+
+    &.inwards:before {
+      border-right: (@baseline - 15) solid darken(@progress-bar-outer, 3%);
+      right: 0;
+    }
+
     .progress-description {
       left: 100%;
       margin-left: @baseline;
@@ -325,6 +342,14 @@ form {
       p {
         margin-bottom: 0;
       }
+    }
+
+    &.inwards .progress-description {
+      color: darken(@progress-bar-inner, 30%);
+      text-align: right;
+      right: 0;
+      left: auto;
+      margin-right: @baseline;
     }
   }
 }

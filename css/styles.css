@@ -304,6 +304,21 @@ form input[type="submit"]:hover {
   height: 162px;
   position: relative;
 }
+.ui-progressbar .ui-progressbar-value:before {
+  content: "";
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  border-left: 9px solid #9bc04c;
+  height: 0;
+  position: absolute;
+  top: 27px;
+  right: -8px;
+  width: 0;
+}
+.ui-progressbar .ui-progressbar-value.inwards:before {
+  border-right: 9px solid #ecefdb;
+  right: 0;
+}
 .ui-progressbar .ui-progressbar-value .progress-description {
   left: 100%;
   margin-left: 24px;
@@ -314,6 +329,13 @@ form input[type="submit"]:hover {
 }
 .ui-progressbar .ui-progressbar-value .progress-description p {
   margin-bottom: 0;
+}
+.ui-progressbar .ui-progressbar-value.inwards .progress-description {
+  color: #4c6022;
+  text-align: right;
+  right: 0;
+  left: auto;
+  margin-right: 24px;
 }
 /***********************************************************************************************/
 /* 8. FREEBIE */

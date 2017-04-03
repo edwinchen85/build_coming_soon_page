@@ -154,3 +154,60 @@ li {
   -o-transition: @property @duration @ease;
   transition: @property @duration @ease;
 }
+
+
+
+
+/***********************************************************************************************/
+/* 3. TYPOGRAPHY AND GENERAL STYLING */
+/***********************************************************************************************/
+body {
+  background: transparent url("@{image-folder}light-bg.jpg");
+  color: @text-color;
+  font: 300 @base-font-size~"/"@baseline @body-font;
+}
+
+p {
+  margin-bottom: @baseline;
+}
+
+h1 {
+  color: @heading-one-color;
+  font: @heading-one-size~"/"@heading-one-leading @special-font;
+  margin: 0 auto;
+  width: 50%;
+}
+
+h2 {
+  font: @heading-two-size~"/"@heading-two-leading @special-font;
+  margin: 0 auto;
+  width: 70%;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: @default-spacing;
+}
+
+a {
+  color: @link-color;
+  text-decoration: none;
+  .transition();
+
+  &:hover {
+    color: @heading-one-color;
+  }
+}
+
+hr {
+  background-color: @border-color;
+  border: none;
+  height: 1px;
+  margin: @default-spacing auto;
+  width: 45%;
+}
+
+.placeholder {
+  color: @placeholder-color;
+}

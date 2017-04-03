@@ -251,3 +251,44 @@ hr {
 .main-header h2 {
   margin-bottom: 0;
 }
+/***********************************************************************************************/
+/* 6. FORM */
+/***********************************************************************************************/
+.form-container {
+  background: #2f2f2f url("../images/dark-bg.jpg");
+  text-align: center;
+}
+#signup {
+  background: transparent url("../images/envelopes.png") center center no-repeat;
+}
+form p {
+  margin-bottom: 6px;
+}
+form p:last-child {
+  margin-bottom: 0;
+}
+form input {
+  border: none;
+  font: 300 16px / 24px 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+  height: 42px;
+  outline: none;
+  text-align: center;
+  width: 288px;
+}
+form input[type="submit"] {
+  background-color: #f54128;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+}
+form input[type="submit"]:hover {
+  background-color: white;
+  color: #f54128;
+}
+.form-note {
+  color: #c3c3c3;
+  font-size: 12px;
+  margin: 24px 0;
+}

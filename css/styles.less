@@ -458,3 +458,64 @@ form {
     width: @baseline;
   }
 }
+
+
+
+
+/***********************************************************************************************/
+/* 11. FLUID LAYOUT */
+/***********************************************************************************************/
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+  h1 {
+    width: 75%;
+  }
+
+  .ui-progressbar .ui-progressbar-value .progress-description {
+    width: 150px;
+  }
+
+  .freebie-container h3 {
+    width: 80%;
+  }
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+  .ui-progressbar .ui-progressbar-value {
+    height: ((@baseline * 4) - 30);
+
+    &:before,
+    &.inwards:before {
+      top: 50%;
+      margin-top: -(@baseline - 15);
+    }
+
+    .progress-description {
+      margin-top: (@baseline - 3);
+      width: auto;
+
+      p {
+        display: none;
+
+        &:first-child {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .go-top {
+    bottom: @baseline;
+    right: @baseline;
+  }
+}
